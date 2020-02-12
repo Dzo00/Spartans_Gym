@@ -264,7 +264,7 @@ if(url.indexOf("program.html")!=-1){
         if(hours<1060){
             $("#workHours").text(++hours);
         }
-        if(customers<580){
+        if(story<580){
             $("#story").text(++story);
         }
         setTimeout(counter, 10);
