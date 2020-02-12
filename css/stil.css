@@ -1,0 +1,639 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    text-transform: uppercase;
+    position: relative;
+    font-family: "Roboto", Arial, sans-serif;
+}
+:root{
+   --hBoja: #fcd307;
+   --Black: #000;
+   --pColor:#5c5a5a;
+   --White: #fff;
+   --LinearGradientColor: linear-gradient(45deg, #fc6b29 0%, #fdf141 100%);
+   --BackgroundColor:#ebebeb;
+}
+.m-top-btm{
+    margin: 20px 0px;
+}
+.visible{
+    display: flex;
+    flex-direction: column;
+}
+.invisible{
+    display: none;
+}
+.active{
+    color: var(--hBoja);
+}
+.Error{
+    color: #ee0f0f;
+    font-weight: 500;
+}
+.Success{
+    color:#08b108;
+    font-weight: 500;
+}
+h2, h3,h4, p, span, video, #gym-info>mark, input[type="text"], textarea{
+    margin-bottom: 10px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--White);
+    cursor: pointer;
+}
+h1{
+    color: var( --hBoja);
+    font-size:75px;
+    text-transform: uppercase;
+    line-height: .9;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+h2{
+    font-size:50px;
+}
+h3{
+    font-size: 25px;
+    font-style: italic;
+}
+h4{
+    font-size: 20px;
+    color: var(--Black);
+}
+p{
+    text-transform: none;
+    font-size: 17px;
+    line-height: 1.9;
+    font-weight: 700;
+    color: var(--pColor);
+    flex-wrap: wrap;
+}
+.sub{
+    color: var(--hBoja);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:14px;
+    margin-bottom:10px;
+    display: block;
+}
+span{
+    display: block;
+    height: max-content;
+}
+mark{
+    background-color: transparent;
+    background:var(--LinearGradientColor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 550;
+}
+.slick-prev, .slick-next {
+    font-size: 0;
+    position: absolute;
+    color: var(--hBoja);
+    border: 0;
+    background: none;
+    z-index: 1;
+    transition: 1s;
+}
+.slick-prev {
+    left: 2%;
+    top:45%;
+}
+.slick-prev:after {
+    content: "<";
+    font-size: 40px;
+    height: auto;
+    cursor: pointer;
+    padding: 15px;
+    background-color: rgba(0, 0,0,0.8);
+    border-radius: 50%;
+    transition: 1s;
+}
+.slick-next {
+    right: 2%;
+    top: 45%;
+}
+.slick-next:after {
+    content: ">";
+    font-size: 40px;
+    height: auto;
+    cursor: pointer;
+    background-color: rgba(0, 0,0,0.6);
+    padding:15px;
+    border-radius: 50%;
+    transition: 1s;
+}
+.slick-prev:hover:after, .slick-next:hover:after{
+color: #fc6b29;
+transform: 0.7s;
+}
+.d-flex-sp-ar{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.f-wrap{
+    flex-wrap:wrap;
+}
+.align-self{
+    align-self: center;
+}
+.center{
+    text-align: center;
+}
+.justify-content-center{
+    justify-content: center !important;
+}
+.align-items-center{
+    align-items: center !important;
+}
+.fade  
+{ 
+  -webkit-animation-name: fade-in; 
+  -webkit-animation-duration: 2s; 
+  animation-name: fade-in; 
+  animation-duration: 2s; 
+}
+@keyframes fade-in{
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+}
+.fadeInUp{
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.ftco-animated{
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@keyframes fadeInUp{
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translate3d(0, 40px, 0);
+        transform: translate3d(0, 40px, 0);
+    }
+    
+    100% {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+@keyframes slide {
+    100% { left: 0; }
+}
+.slide {
+    position: relative;
+    left: -1200px;
+    -webkit-animation: slide 1s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide 1s forwards;
+    animation-delay: 1s;
+}
+header{
+    background-image: url("../slike/pozadina_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#overlayer{
+    background-color: rgba(0,0,0, 0.4);
+    padding:40px 0px;
+}
+#nav-logo{
+    margin-bottom: 80px;
+}
+#burger{
+    display: none;
+    font-size: 20px;
+}
+.logo {
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.logo span {
+      position: relative; 
+}
+.logo span:after {
+        position: absolute;
+        top: 50%;
+        left: -7px;
+        transform: translateY(-50%);
+        content: '';
+        width: 6px;
+        height: 4px;
+        background: var( --hBoja); 
+}
+.logo span:before {
+        position: absolute;
+        top: 50%;
+        right: -7px;
+        transform: translateY(-50%);
+        content: '';
+        width: 6px;
+        height: 4px;
+        background: var( --hBoja); 
+}
+.logo span i {
+        position: relative; 
+}
+.logo span i.left-bar:after {
+        position: absolute;
+        top: 50%;
+        left: -11px;
+        transform: translateY(-50%);
+        content: '';
+        width: 4px;
+        height: 20px;
+        background: var( --hBoja); 
+}
+.logo span i.left-bar:before {
+        position: absolute;
+        top: 50%;
+        left: -16px;
+        transform: translateY(-50%);
+        content: '';
+        width: 4px;
+        height: 14px;
+        background: var( --hBoja); 
+}
+.logo span i.right-bar:after {
+        position: absolute;
+        top: 50%;
+        right: -11px;
+        transform: translateY(-50%);
+        content: '';
+        width: 4px;
+        height: 20px;
+        background: var( --hBoja); 
+}
+.logo span i.right-bar:before {
+        position: absolute;
+        top: 50%;
+        right: -16px;
+        transform: translateY(-50%);
+        content: '';
+        width: 4px;
+        height: 14px;
+        background: var( --hBoja); 
+}
+nav ul li{
+    display: inline;
+    padding: 15px;
+}
+.active{
+    color: var( --hBoja);
+}
+nav ul li a:hover{
+    color: var( --hBoja);
+    transition: 0.5s;
+}
+.fa, .far{
+    color: var(--pColor);
+    font-size: 40px;
+    padding: 10px;
+    transition: 1s;
+}
+.fa:hover, .far:hover{
+    background: var(--LinearGradientColor);    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.7s;
+}
+
+footer{
+    background-color: var(--Black);
+    padding-top: 40px;
+}
+.okvir{
+    width:30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.okvir ul li a{
+    color: var(--pColor);
+    font-weight: 800;
+}
+.okvir ul li a:hover{
+    color: var(--hBoja);
+}
+#futerCopy{
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+}
+#futerIcon ul li{
+    display: inline;
+}
+/*  *INDEX PAGE*  */
+#headline{
+   text-align: center;
+   padding:106px;
+}
+#headline span{
+    font-size:170px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: var( --hBoja);
+    -webkit-text-stroke-width: 1px;
+}
+#about{
+    width:100%;
+    padding:30px;
+}
+#about-left{
+    width:55%;
+    position: relative;
+}
+#about-left img{
+    width:30%;
+    margin: 2px;
+}
+#about-left img:hover{
+    outline:3px solid var(--hBoja);
+}
+#videoDiv{
+        width:90%;
+        height:400px;
+        background-image: url("../slike/mat-fraser.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0 auto;
+}
+#video{
+    width: 80%;
+}
+.sakrijVideo{
+    position: fixed;
+    width: 100% !important;
+    top: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    transform: translateY(-1000px); 
+    transition: 0.7s;
+}
+.neSakrijVideo{
+    transform: translateY(0px);
+}
+#zatvoriVideo{
+    text-decoration: none;
+    position: fixed;
+    top: 4%;
+    right: 4%;
+    color: white;
+    font-size: 2em;
+}
+#videoDiv a{    
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: transparent;
+    padding: 30px;
+    border: 3px solid var(--hBoja);
+    border-radius: 50%;
+    transition: 1s;  transition: 0.7s;
+}
+#videoDiv a:hover{
+    background-color: rgba(0,0,0, 0.6);
+    transition: 0.7s;
+}
+#videoDiv .fa-play{
+    font-size:25px;
+    color: var(--hBoja);
+}
+#about-right{
+    width:45%;
+    padding:20px;
+}
+#about-right a{
+    padding: 15px 40px;
+    font-size: 15px;
+    border-radius: 19px;
+    display: inline-block;
+    font-weight: bold;
+    background:var(--White);
+    color: var(--Black);
+    border: 2px solid var(--Black);
+    margin-top:10px;  
+}
+#about-right a:hover{
+    /*linear-gradient(45deg, #fc6b29 0%, #fdf141 100%);*/
+    background:var(--LinearGradientColor)
+}
+#about-right p{
+    text-transform: uppercase;
+}
+#membership-top{
+    background-color: var(--Black);
+    color: var(--White);
+    padding: 20px 0px;
+}
+.slider{
+    /* width:25% !important; */
+    height: 400px !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.description{
+    color: var(--White);
+    display: block;
+    position: relative;
+    top: 74%;
+    background: rgba(0,0,0, 0.6);
+    padding:10px;
+}
+.description p, .description h4{
+    color: var(--White);
+    line-height: 0.9;
+}
+#sliderDiv0{
+    background-image: url("../slike/img_7.jpg");
+}
+#sliderDiv1{
+    background-image: url("../slike/img_10.jpg");
+}
+#sliderDiv2{
+    background-image: url("../slike/img_11.jpg");
+}
+#sliderDiv3{
+    background-image: url("../slike/img_8.jpg");
+}
+#sliderDiv4{
+    background-image: url("../slike/img_2.jfif");
+}
+#sliderDiv5{
+    background-image: url("../slike/img_9.jfif");
+}
+#membership-bottom{
+    width:80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.pricingBox{
+    width:28%;
+    box-shadow: 1px 2px 5px 6px rgba(255,205,105,1);
+    padding: 15px 0px;
+}
+sup{
+    font-size: 20px;
+    top: -1em;
+}
+.pricingBox span{
+    font-size: 28px;
+    color: var(--hBoja);
+    padding: 15px 0px;
+}
+hr{
+    width: 60%;
+    margin: 0 auto;
+}
+/*  *AUTHOR PAGE*  */
+#author{
+    padding: 31px 20px;
+}
+#pic{
+ width:30%;
+}
+#pic img{
+    width: 100%;
+    border: 8px inset var(--hBoja);
+}
+#about-author{
+    align-self: center;
+    width:45%;
+}
+
+/*  *CONTACT PAGE*  */
+#gym-info{
+    background-color: var(--BackgroundColor);
+    padding: 40px;
+    align-self: center;
+}
+#gym-info mark{
+    display: block;
+}
+#map{
+    height: 215px;
+}
+#map iframe{
+    width:100%;
+    height: inherit;
+}
+#form{
+    width:40%;
+}
+#tbEmail, #tbName{
+    width:47%;
+}
+#tbSubject, textarea{
+    width:95%;
+}
+.form{
+    padding:10px 0px;
+    border: transparent;
+    border-bottom: 1px solid var(--Black);
+    outline: none !important;
+    font-size:16px;
+    color: var(--Black);
+}
+input[type="submit"]{
+    background: var(--LinearGradientColor);
+    border: transparent;
+    padding: 15px 40px;
+    font-size: 17px;
+    border-radius: 19px;
+    color:var(--White);
+    margin-bottom: 10px;
+}
+#contact span{
+    text-transform: none;
+}
+#testimonials{
+    padding: 10px 0px;
+}
+.story-content{
+    width:30%;
+}
+.story-content p{
+    width:50%;
+    margin: 0 auto;
+    font-style: italic;
+}
+.clientPic{
+   width:60%;
+   padding: 10px;
+   margin: 0 auto;
+}
+.clientPic img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--hBoja);
+    border-radius: 50%;
+}
+
+/*  *PROGRAM PAGE*  */
+#program a{
+    color: var(--pColor);
+    font-size: 18px;
+}
+#program-left{
+    width:45%;
+}
+#program-right{
+    width:45%;
+}
+.hiddenContent{
+    padding: 0px 20px;
+    width: 80%;
+}
+#program img{
+    width: 90%;
+    margin-bottom:15px;
+}
+#program a:hover{
+    color: var(--hBoja);
+}
+#counter-overlayer{
+    height:200px;
+}
+/*  *RESPONSIVE*  */
+@media screen and (max-width:1200px){
+    h1{
+        font-size:50px;
+    }
+    #headline span{
+        font-size:140px;
+    }
+}
