@@ -240,6 +240,36 @@ if(url.indexOf("program.html")!=-1){
     }
     ul+="</ul>";
     programRight.innerHTML+=ul;
+ 
+ var counterArray=[["250","Happy Customers","customers"],["0","Perfect Bodies","body"],
+    ["650","Working Hours","workHours"],["0","Succes Stories","story"]];
+    var counterDiv=document.getElementById("counter-overlayer");
+    for(let i=0; i<counterArray.length;i++){
+        var counterBox = document.createElement("div");
+        counterBox.innerHTML=`<strong class="number">${counterArray[i][0]}</strong><span>${counterArray[i][1]}</span>`;
+        counterDiv.appendChild(counterBox);
+        counterBox.firstChild.setAttribute("id",`${counterArray[i][2]}`);  
+    }
+    function counter(){
+        var customers= $("#customers").text();
+        var body=$("#body").text();
+        var hours=$("#workHours").text();
+        var story= $("#story").text();
+        if(customers<800){
+            $("#customers").text(++customers);
+        }
+        if(body<359){
+            $("#body").text(++body);
+        }
+        if(hours<1060){
+            $("#workHours").text(++hours);
+        }
+        if(customers<580){
+            $("#story").text(++story);
+        }
+        setTimeout(counter, 10);
+    }
+    counter();
 }
 
 // CONTACT PAGE
