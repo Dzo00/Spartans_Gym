@@ -223,7 +223,7 @@ header{
     background-color: rgba(0,0,0, 0.4);
     padding:40px 0px;
 }
-#nav-logo{
+.nav-logo{
     margin-bottom: 80px;
 }
 #burger{
