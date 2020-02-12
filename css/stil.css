@@ -625,8 +625,31 @@ input[type="submit"]{
 #program a:hover{
     color: var(--hBoja);
 }
+#counter{
+    background-image: url(../slike/pozadina_1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #counter-overlayer{
-    height:200px;
+    height:350px;
+    padding:25px;
+    text-align: center;
+    background:linear-gradient(45deg, rgba(252, 107, 41,0.6),rgba(253, 241, 65,0.6));
+    margin: 0 auto;
+}
+.number{
+    width:20%;
+    display: block;
+    font-size: 50px;
+    color: var(--White);
+    padding: 10px;
+}
+#counter span{
+    color: var(--White);
+    font-size: 12px;
+    font-weight: 700;
 }
 /*  *RESPONSIVE*  */
 @media screen and (max-width:1200px){
