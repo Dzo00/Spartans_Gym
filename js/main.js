@@ -315,7 +315,7 @@ function provera(e){
     message = document.getElementById("taMessage");
     reIme= /^[A-Z][a-z]{2,12}(\s[A-z][a-z]{2,12})+$/;
     reEmail= /^([a-z]{3,}\d{0,}\@((gmail|yahoo)\.com)|ict\.edu\.rs)|([a-z]{3,}\d{0,}\.[a-z]{3,}\d{0,}\@((gmail|yahoo)\.com)|ict\.edu\.rs)$/;
-    reSub= /^([A-z][a-z]{0,}\d{0,})|([A-z][a-z]{0,}\d{0,}(\s([A-Z]{0,}|[a-z]{0,}){0,}\d{0,}))+$/;
+    reSub= /^([A-Z][a-z]{0,}\d{0,})|([A-Z][a-z]{0,}\d{0,}(\s([A-z]{0,}\d{0,})+))+$/;
     reMess= /^([A-z\d\.])+/;
 
     //PROVERA IME
