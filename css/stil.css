@@ -640,7 +640,6 @@ input[type="submit"]{
     margin: 0 auto;
 }
 .number{
-    width:20%;
     display: block;
     font-size: 50px;
     color: var(--White);
