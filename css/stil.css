@@ -459,6 +459,12 @@ footer{
     color: var(--White);
     padding: 20px 0px;
 }
+strong{
+    font-style: italic;
+    padding: 20px;
+    display: block;
+    line-height: 2.5;
+}
 .slider{
     /* width:25% !important; */
     height: 400px !important;
