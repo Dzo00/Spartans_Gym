@@ -139,7 +139,7 @@ if (url.indexOf("index.html")!=-1){
     
     var aboutSlike=[["slike/img_5.jpg","pilates"],
                    ["slike/img_6.jpg","weight lifting"],
-                   ["slike/img_7.jpg","boxing"]
+                   ["slike/img_3.jpg","gym equipment"]
     ];
     var aboutLeft= document.getElementById("about-left");
     var sadrzajAbout="";
